@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+.scoreClass {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 88%;
+    left: 3%;
+}
+
+.scoreTimer {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 92%;
+    left: 3%;
+}
+
+.mainPanal {
+    background: url(../img/stage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    height: 100vh;
+}
+
+.duckImageDiv img {
+    width: 100px;
+    position: absolute;
+    top: 65%;
+}
+
+.none {
+    display: none;
+}
+
+#aimImage {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 35px;
+    /* left: 35px; */
+
+}
+
+#bird1 {
+    animation: b1 5s infinite;
+    right: 100%
+}
+
+@keyframes b1 {
+    0% {
+        top: 65%;
+        right: 10%
+    }
+
+    25% {
+        top: 30%;
+    }
+
+    75% {
+        top: 10%;
+    }
+
+    100% {
+        top: 50%
+    }
+}
+
+#bird2 {
+    animation: b2 5s infinite;
+    left: 100%
+}
+
+@keyframes b2 {
+    0% {
+        top: 65px;
+        left: 10%;
+    }
+
+    25% {
+        top: 30%;
+    }
+
+    75% {
+        top: 10%;
+    }
+
+    100% {
+        top: 20%
+    }
+}
+
+#bird3 {
+    top: 69%;
+    animation: b3 3s infinite;
+    left: 100%;
+    transform: scale(2);
+}
+
+@keyframes b3 {
+    0% {
+        top: 65%;
+        left: -10%;
+    }
+}
+
+#bird4 {
+    animation: b4 5s infinite;
+    left: 100%;
+    transform: scale(2);
+}
+
+@keyframes b4 {
+    0% {
+        top: 65%;
+        left: 10%;
+    }
+
+    25% {
+        top: 30%;
+    }
+
+    75% {
+        top: 90%;
+    }
+
+    100% {
+        top: 50%
+    }
+}
+
+#turtle1 {
+    right: 100%;
+    top: 73%;
+    animation: b5 60s infinite;
+    transform: scale(2);
+}
+
+@keyframes b5 {
+    0% {
+        right: -10%;
+    }
+}
+
+#frog1 {
+    left: 100%;
+    top: 75%;
+    ;
+    animation: b6 10s infinite;
+    transform: scale(2);
+}
+
+@keyframes b6 {
+    0% {
+        left: 0%;
+    }
+}
+
+#bug1 {
+    left: 100%;
+    top: 73%;
+    ;
+    animation: b7 80s infinite;
+}
+
+@keyframes b7 {
+    0% {
+        left: 0%;
+    }
+}
+
+/* pop-up =============================================================== */
+.pop-up {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+}
+
+.pop-up.open {
+    opacity: 1;
+    visibility: visible;
+    overflow: auto;
+}
+
+.pop-up.open .pop-up__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+.pop-up__body {
+    /* min-height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.pop-up__content {
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+    transition: .4s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/paper.webp);
+    height: 70vh;
+    background-size: cover;
+    padding: 150px 150px 0;
+}
+
+.pop-up__text {
+    color: #000;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#pop-up-1 {
+    z-index: 100000;
+}

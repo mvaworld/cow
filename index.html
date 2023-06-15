@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>мочи их БЛЯТЬ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Set the Background Image -->
+    <div class="mainPanal">
+        <!-- onmousemove="moveAimImage(event)" -->
+        <!--Set the aim Image  -->
+        <!-- <div class="aimImageContainer">
+            <img  id="aimImage" src="img/aim.png">
+        </div> -->
+        <div class="duckImageDiv">
+            <img id="bird1" src="img/game1.webp" onclick="hideBird(this.id)">
+            <img id="bird2" src="img/game2.webp" onclick="hideBird(this.id)">
+            <img id="bird3" src="img/raf1.webp" onclick="hideBird(this.id)">
+            <img id="bird4" src="img/rag.webp" onclick="hideBird(this.id)">
+            <img id="bug1" src="img/yohj.webp" onclick="hideBird(this.id)">
+            <img id="frog1" src="img/viv.webp" onclick="hideBird(this.id)">
+            <img id="turtle1" src="img/raf2.webp" onclick="hideBird(this.id)">
+        </div>
+        <audio id="fireSound">
+            <source src="assets/Untitled.mp3" type="audio/mp3">
+        </audio>
+        <div class="scoreClass">Счет: <span id="currentScore"></span></div>
+        <div class="scoreTimer">Осталось времени: <span id="currentTimer"> </span> сек</div>
+    </div>
+
+    <div id="pop-up-1" class="pop-up">
+        <div class="pop-up__body">
+            <div class="pop-up__content">
+                <p class="pop-up__text">Поздраляю ковбой, ты поймал их всех <br>
+                    вот твоя добыча:
+                </p>
+
+                <p class="pop-up__text"> ого, моя давняя мечта - <a target="_blank"
+                        href="https://www.avito.ru/nizhniy_novgorod/odezhda_obuv_aksessuary/raf_simons_x_adidas_platform_3062475639">Raf
+                        Simons platform lace</a>
+                </p>
+
+                <p class="pop-up__text"> какие-то игры, кажется компьютерные:
+                    <a target="_blank" href="https://store.steampowered.com/app/1364780/Street_Fighter_6/">Street Fighter 6</a> и <a
+                        href="https://store.steampowered.com/app/1283400/Steelrising/">Steelrising</a>
+                </p>
+
+                <p class="pop-up__text"> много разных духов, и все от <a target="_blank"
+                        href="https://www.letu.ru/brand/yohji-yamamoto">yohji yamamoto</a> (кроме im not going to
+                    disturb you и unravel)
+                </p>
+
+                <p class="pop-up__text"> еще одна хорошая пара, в этот раз <a target="_blank"
+                        href="https://www.avito.ru/moskva/odezhda_obuv_aksessuary/krossovki_asics_gel_kayano_26_x_vivienne_westwood_2621279468">Vivienne
+                        Westwood gel kayano 26 </a>
+                </p>
+
+                <p class="pop-up__text"> ценная находка, <a target="_blank"
+                        href="https://www.avito.ru/nizhniy_novgorod/odezhda_obuv_aksessuary/kedy_adidas_by_raf_simons_original_novye_2181711651">Raf
+                        Simons spirit low green</a>
+                </p>
+
+                <p class="pop-up__text"> надежная пара обуви, <a target="_blank"
+                        href="https://www.avito.ru/moskva/odezhda_obuv_aksessuary/dr_martens_a-cold-wall_original_39-45_eu_2521266784">a
+                        cold wall x Dr. Marteens high</a>
+                </p>
+
+                <p class="pop-up__text"> Какой-то крутой коврик для йоги
+                </p>
+
+                <p class="pop-up__text"> Какой-то странный <a target="_blank"
+                        href="https://www.avito.ru/moskva/odezhda_obuv_aksessuary/vorotnik_alyx_9sm_2926760378">воротник
+                        Alyx</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="pop-up-2" class="pop-up">
+        <div class="pop-up__body">
+            <div class="pop-up__content">
+                <p class="pop-up__text"> твое новое прозвище: <span id="namee"></span> косой глаз
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
