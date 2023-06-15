@@ -15,8 +15,9 @@ let Timecounter = 60;
 //     imageDiv.style.left=x + 'px';
 //     imageDiv.style.top=y + 'px';
 // }
+
 let answer1 = prompt("добро пожаловать ковбой, скажи мне, как тебя зовут?")
-alert('отлично ' + answer1 + ', чтобы пройти испытание тебе нужно набрать 25 очков за 30 секунд, приступай' )
+alert('отлично ' + answer1 + ', чтобы пройти испытание тебе нужно набрать 25 очков за 30 секунд, приступай')
 
 
 setInterval(() => {
@@ -25,7 +26,7 @@ setInterval(() => {
         duckImageDiv.classList.add('none');
     } else {
         document.getElementById("currentTimer").innerHTML = --Timecounter;
-    }  
+    }
 
     if (Timecounter >= 0 & count <= 25) {
         document.getElementById("currentTimer").innerHTML = --Timecounter;
@@ -62,3 +63,11 @@ openPopupButtons.forEach((button) => {
         popupBg.classList.add('open');
     })
 });
+
+document.getElementById("musSound").play();
+var first = true;
+document.onclick = function () {
+    document.getElementById("musSound").play();
+    if (first == true) audio.play()
+    first = false;
+}
